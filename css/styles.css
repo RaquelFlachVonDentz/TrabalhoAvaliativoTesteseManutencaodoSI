@@ -1,0 +1,191 @@
+ /* Reset básico */
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f9fc;
+  color: #333;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Cabeçalho do card com título centralizado */
+.card-header {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #333;
+  padding: 15px 0;
+}
+
+/* Formulário */
+form#formulario-pedido {
+  background: #fff;
+  padding: 20px 25px;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px 25px;
+}
+
+form label {
+  font-weight: 600;
+  color: #555;
+  display: block;
+  margin-bottom: 8px;
+}
+
+form input[type="text"],
+form input[type="date"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+}
+
+form button[type="submit"] {
+  grid-column: span 2;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background-color: #3b82f6;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  justify-self: start;
+}
+
+form button[type="submit"]:hover {
+  background-color: #2563eb;
+}
+
+/* Botão Exportar */
+#btn-exportar {
+  grid-column: span 2;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background-color: #16a34a;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  justify-self: start;
+  margin-top: 10px;
+}
+
+#btn-exportar:hover {
+  background-color: #15803d;
+}
+
+/* Tabela */
+.table-responsive {
+  max-width: 900px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  background: white;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead tr {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 700;
+  text-align: left;
+  border-radius: 10px 10px 0 0;
+}
+
+thead th {
+  padding: 15px 20px;
+  font-weight: 600;
+}
+
+tbody tr {
+  background: #f9fafb;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border-radius: 10px;
+}
+
+tbody tr:hover {
+  background-color: #e0f2fe;
+}
+
+tbody td {
+  padding: 15px 20px;
+  vertical-align: middle;
+  border: none;
+  font-size: 0.95rem;
+}
+
+/* Status colors */
+.entregue {
+  background-color: #d1fae5 !important;
+}
+
+.fora-prazo {
+  background-color: #fee2e2 !important;
+}
+
+.nao-entregue {
+  background-color: #fef3c7 !important;
+}
+
+/* Botões Remover */
+.btn-remover {
+  background-color: #ef4444;
+  border: none;
+  color: white;
+  padding: 7px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-remover:hover {
+  background-color: #b91c1c;
+}
+
+/* Mensagens de validação */
+input:invalid {
+  border-color: #ef4444;
+}
+
+input:invalid:focus {
+  box-shadow: 0 0 5px rgba(239, 68, 68, 0.6);
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Relatório de Entregas</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="container py-4">
+
+  <h1 class="mb-4">Relatório de Conferência de Entregas</h1>
+
+  <!-- Formulário -->
+  <div class="card mb-4">
+    <div class="card-header">Inserir novo pedido</div>
+    <div class="card-body">
+      <form id="formulario-pedido" class="row g-3 needs-validation" novalidate>
+        <div class="col-md-3">
+          <label for="numeroCartao" class="form-label">Nº do Cartão</label>
+          <input type="text" class="form-control" id="numeroCartao" required>
+          <div class="invalid-feedback">Por favor, informe o nº do cartão.</div>
+        </div>
+        <div class="col-md-3">
+          <label for="tipoCartao" class="form-label">Tipo do Cartão</label>
+          <input type="text" class="form-control" id="tipoCartao" required>
+          <div class="invalid-feedback">Por favor, informe o tipo do cartão.</div>
+        </div>
+        <div class="col-md-3">
+          <label for="fabricante" class="form-label">Fabricante</label>
+          <input type="text" class="form-control" id="fabricante" required>
+          <div class="invalid-feedback">Por favor, informe o fabricante.</div>
+        </div>
+        <div class="col-md-3">
+          <label for="dataSolicitacao" class="form-label">Data da Solicitação</label>
+          <input type="date" class="form-control" id="dataSolicitacao" required>
+          <div class="invalid-feedback">Por favor, informe a data da solicitação.</div>
+        </div>
+        <div class="col-md-3">
+          <label for="dataEntrega" class="form-label">Data da Entrega</label>
+          <input type="date" class="form-control" id="dataEntrega">
+          <div class="invalid-feedback" id="dataEntregaFeedback">Data da entrega não pode ser antes da solicitação.</div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Adicionar Pedido</button>
+          <button id="btn-exportar" type="button" class="btn btn-success ms-2">Exportar CSV</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Tabela -->
+  <div class="table-responsive">
+    <table class="table table-bordered" id="tabela-relatorio">
+      <thead class="table-light">
+        <tr>
+          <th>ID</th>
+          <th>Nº do Cartão</th>
+          <th>Tipo do Cartão</th>
+          <th>Fabricante</th>
+          <th>Data da Solicitação</th>
+          <th>Data da Entrega</th>
+          <th>Status</th>
+          <th>Dias</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <hr>
+<h2>🧪 Testes</h2>
+<button id="rodarTestesUnitBtn">Rodar Testes Unitários</button>
+<button id="rodarTestesComponentBtn">Rodar Testes de Componentes</button>
+<pre id="testes-resultados" style="background:#f8f9fa; padding:1em; border:1px solid #ccc;"></pre>
+
+
+  <script src="src/calculadora.js"></script>
+  <script src="src/rodarTestes.js"></script>
+  <script src="tests/unitario.test.js"></script>
+  <script src="tests/component.test.js"></script>
+</body>
+
+</html>
