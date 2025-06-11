@@ -24,8 +24,13 @@
         </div>
         <div class="col-md-3">
           <label for="tipoCartao" class="form-label">Tipo do Cartão</label>
-          <input type="text" class="form-control" id="tipoCartao" required>
-          <div class="invalid-feedback">Por favor, informe o tipo do cartão.</div>
+          <select class="form-select" id="tipoCartao" required>
+            <option value="">Selecione...</option>
+            <option value="débito">Débito</option>
+            <option value="crédito">Crédito</option>
+            <option value="múltiplo">Múltiplo</option>
+          </select>
+          <div class="invalid-feedback">Por favor, selecione o tipo do cartão.</div>
         </div>
         <div class="col-md-3">
           <label for="fabricante" class="form-label">Fabricante</label>
@@ -40,7 +45,8 @@
         <div class="col-md-3">
           <label for="dataEntrega" class="form-label">Data da Entrega</label>
           <input type="date" class="form-control" id="dataEntrega">
-          <div class="invalid-feedback" id="dataEntregaFeedback">Data da entrega não pode ser antes da solicitação.</div>
+          <div class="invalid-feedback" id="dataEntregaFeedback">Data da entrega não pode ser antes da solicitação.
+          </div>
         </div>
         <div class="col-12">
           <button class="btn btn-primary" type="submit">Adicionar Pedido</button>
@@ -71,10 +77,10 @@
   </div>
 
   <hr>
-<h2>🧪 Testes</h2>
-<button id="rodarTestesUnitBtn">Rodar Testes Unitários</button>
-<button id="rodarTestesComponentBtn">Rodar Testes de Componentes</button>
-<pre id="testes-resultados" style="background:#f8f9fa; padding:1em; border:1px solid #ccc;"></pre>
+  <h2>🧪 Testes</h2>
+  <button id="rodarTestesUnitBtn">Rodar Testes Unitários</button>
+  <button id="rodarTestesComponentBtn">Rodar Testes de Componentes</button>
+  <pre id="testes-resultados" style="background:#f8f9fa; padding:1em; border:1px solid #ccc;"></pre>
 
 
   <script src="src/RelatoriodeConferenciadeEntregasdeCartoes.js"></script>
